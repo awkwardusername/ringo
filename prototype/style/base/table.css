@@ -1,0 +1,43 @@
+.table {
+    display: table;
+}
+
+.itable {
+    display: inline-table;
+}
+
+.tcaption {
+    display: table-caption;
+}
+
+.th {
+    display: table-cell;
+}
+
+.td {
+    display: table-cell;
+}
+
+.tc {
+    display: table-column;
+}
+
+.tcgroup {
+    display: table-column-group;
+}
+
+.tfoot {
+    display: table-footer-group;
+}
+
+.thead {
+    display: table-header-group;
+}
+
+.tr {
+    display: table-row;
+}
+
+.trgroup {
+    display: table-row-group;
+}
