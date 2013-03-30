@@ -1,0 +1,83 @@
+/*
+ * RinGo > Profile > Header
+ */
+
+thead {
+    height: 20%;
+}
+
+thead * {
+    vertical-align: bottom;
+}
+
+.profile #username {
+    margin: 0;
+    font-size: 300%;
+}
+
+/*
+ * RinGo > Profile > Header > Date Scroller
+ */
+.profile #date-scroller {
+    margin: 0 auto;
+    display: inline-block;
+    text-align: center;
+}
+
+.profile #date-scroller .year {
+    font-size: 200%;
+}
+
+.profile #date-scroller .dates {
+    margin: 0;
+    padding: 0;
+    font-size: 150%;
+}
+
+.profile #date-scroller .dates * {
+    display: inline;
+    vertical-align: middle;
+}
+
+@media(min-width: 700px) {
+    .profile #date-scroller-container {
+        width: 100%;
+    }
+}
+
+@media(min-width: 450px) and (max-width: 699px) {
+    .profile #date-scroller-container {
+        width: 100%;
+    }
+}
+
+@media(min-width: 200px) and (max-width: 449px) {
+    .profile #date-scroller-container {
+        font-size: 12pt;
+    }
+}
+
+/*
+ * RinGo > Profile > Content
+ */
+
+.profile #content-container .square {
+    display: inline-block;
+    min-width: 80px;
+    max-width: 25%;
+    min-height: 80px;
+    max-height: 20%;
+    width: 80px;
+    height: 80px;
+    background-color: #ccc;
+    margin: 0 8px 8px 0;
+    padding: 4px;
+}
+
+.profile #content-container .square * {
+    margin: 0;
+}
+
+.profile #content-container .square p {
+    font-size: 10pt;
+}
