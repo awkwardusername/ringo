@@ -1,0 +1,16 @@
+@import 'fonts/BPreplay/stylesheet.css';
+@import 'fonts/Nunito/stylesheet.css';
+
+html * {
+	/* font-family: "Helvetica Neue LT Std", "Helvetica Neue", Helvetica, "Source Sans Pro", sans-serif !important; */
+	font-family: BPreplay !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Nunito' !important;
+	font-weight: 200 !important;
+}
+
+.badge {
+	font-family: Nunito !important;
+}

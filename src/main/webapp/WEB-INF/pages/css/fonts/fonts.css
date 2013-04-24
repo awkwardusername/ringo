@@ -1,0 +1,21 @@
+@import 'BPreplay/stylesheet.css';
+@import 'Nunito/stylesheet.css';
+
+html * {
+	/* font-family: "Helvetica Neue LT Std", "Helvetica Neue", Helvetica, "Source Sans Pro", sans-serif !important; */
+	font-family: BPreplay, Nunito, 'VAGRounded', 'Arial Rounded MT', Helvetica, Arial, sans-serif !important;
+}
+
+.ringocss h1,
+.ringocss h2,
+.ringocss h3,
+.ringocss h4,
+.ringocss h5,
+.ringocss h6 {
+	font-family: Nunito, BPreplay, 'VAGRounded', 'Arial Rounded MT', Helvetica, Arial, sans-serif !important;
+	font-weight: 200 !important;
+}
+
+.tile > .brand > .badge {
+	font-family: Nunito, BPreplay, 'VAGRounded', 'Arial Rounded MT', Helvetica, Arial, sans-serif !important;
+}

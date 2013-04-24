@@ -1,0 +1,34 @@
+.page .page-header .page-header-content {
+	height: 150px;
+	min-height: 150px;
+}
+
+.page.fixed-header .page-region {
+	padding-top: 190px;
+}
+
+#date-scroller {
+    position: absolute;
+    padding: 120px;
+}
+
+#date-scroller > ul > li {
+    display: inline-block;
+}
+
+#date-scroller > ul > li > * {
+    display: block;
+    line-height: 0.95;
+}
+
+#date-scroller > ul > li > .day {
+    font-size: 125%;
+}
+
+#date-scroller > .year {
+    font-size: 225%;
+}
+
+#date-scroller > ul > li > .month {
+    font-size: 100%;
+}

@@ -1,0 +1,49 @@
+/**
+ * ringo-user
+ * Description:   Defines the class for a RinGo user.
+ *
+ * Project:       RinGo
+ *
+ * Written by:    Temoto-kun
+ * Website:       http://nihilist-philanthropy.co.cc
+ * E-mail:        kiiroifuriku(at)hotmail(dot)com
+ *
+ * Date:          2013 April 07   02:09
+ */
+
+RinGo.User = function() {
+	// QUESTION database can store hierarchy, right?
+	// If so, just recall the user's content.
+	// Else, provide stuff here.
+
+	var login = "";
+	var squares = [];
+
+	return {
+		getLogin: function() {
+			return login;
+		},
+
+		setLogin: function(l) {
+			login = l;
+		},
+
+		getSquares: function() {
+			return squares;
+		},
+
+		addSquare: function(s) {
+			squares.push(s);
+		},
+
+		removeSquare: function(ix) {
+			var s = [];
+			for(var i = 0, length = squares.length; i < length; i++)
+				if(i != ix)
+					s.push(squares[i]);
+			squares = s;
+		}
+	};
+};
+
+RinGo.currentUser = (function() { return new RinGo.User(); })(window);

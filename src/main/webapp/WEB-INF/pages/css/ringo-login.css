@@ -1,0 +1,191 @@
+.page {
+	border: none !important;
+	outline: none !important;
+}
+
+.page.fill {
+	padding: 8px;
+}
+
+.page.snapped {
+	text-align: center;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+#logo {
+	display: inline-block;
+	background-position: center center;
+}
+
+#logo * {
+	display: none;
+}
+
+.app-bar ul {
+	padding: 0;
+}
+
+.app-bar ul li {
+	display: inline-block;
+	padding: 0 4px;
+}
+
+#form-login {
+	width: 100%;
+}
+
+#form-login table {
+	width: auto;
+	margin: 0 auto;
+}
+
+#form-login table tbody tr th:not([colspan]) {
+	text-align: left;
+}
+
+/*
+ * Metro UI CSS
+ * (c) 2012-2013 by Sergey Pimenov
+ * Licensed under the MIT License and Commercial
+ *
+ * Responsive-1200.less
+ *
+ */
+/* Large desktop */
+/*
+@media (min-width: 1200px) {
+	#logo {
+		background: url('./../img/ringo-logo-trans-72dpi.png') no-repeat !important;
+		width: 288px !important;
+		height: 216px !important;
+	}
+
+
+}
+@media (min-width: 980px) {
+	#logo {
+		background: url('./../img/ringo-logo-trans-72dpi.png') no-repeat !important;
+		width: 288px !important;
+		height: 216px !important;
+	}
+}
+*/
+@media (min-width: 950px) {
+	#logo {
+		background: url('./../img/ringo-logo-trans-72dpi.png') no-repeat !important;
+		width: 288px !important;
+		height: 216px !important;
+	}
+
+	.page.snapped .page-header .page-header-content {
+		height: 200px !important;
+	}
+
+	.page {
+		margin-bottom: 108px !important;
+	}
+
+	.app-bar {
+		height: 100px !important;
+		min-height: 100px !important;
+	}
+}
+@media (min-width: 700px) and (max-width: 949px) {
+	#logo {
+		background: url('./../img/ringo-logo-trans-36dpi.png') no-repeat !important;
+		width: 144px !important;
+		height: 108px !important;
+	}
+
+	div, span, a, p, td, th, input, button, select {
+		font-size: 10pt !important;
+	}
+
+	body {
+		padding-left: 0px !important;
+	}
+
+	#form-login input[type="text"],
+	#form-login input[type="password"] {
+		width: 100px;
+	}
+
+	.page.snapped .page-header .page-header-content {
+		height: 100px !important;
+	}
+
+	.page.snapped {
+		width: 25% !important;
+	}
+
+    .page.fill {
+	    width: 75% !important;
+    }
+
+    .app-bar {
+	    height: 75px !important;
+	    min-height: 75px !important;
+    }
+}
+@media (min-width: 300px) and (max-width: 699px) {
+	#logo {
+		background: url('./../img/ringo-logo-trans-36dpi.png') no-repeat !important;
+		width: 144px !important;
+		height: 108px !important;
+	}
+
+	div, span, a, p, td, th, input, button, select {
+		font-size: 8pt !important;
+	}
+
+	#form-login input[type="text"],
+	#form-login input[type="password"] {
+		width: 100px;
+	}
+
+	.page.snapped .page-header .page-header-content {
+		height: 100px !important;
+	}
+
+	.page.fill .page-header .page-header-content {
+		height: 125px !important;
+	}
+
+	.page.snapped {
+		width: 25% !important;
+		padding: 2px 2px 2px 6px;
+	}
+
+	.page.fill {
+		width: 75% !important;
+		padding: 2px 6px 2px 2px;
+	}
+
+	.app-bar {
+		height: 75px !important;
+		min-height: 75px !important;
+	}
+
+	#form-login table {
+		display: block !important;
+		margin: 0 auto !important;
+	}
+
+	#form-login table tbody {
+		width: 100% !important;
+	}
+
+	#form-login table tbody tr {
+		display: block !important;
+		width: 100% !important;
+		border: none;
+	}
+
+	#form-login table tbody tr > * {
+		display: list-item !important;
+		list-style-type: none;
+		width: 100% !important;
+	}
+}

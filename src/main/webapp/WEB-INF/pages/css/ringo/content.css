@@ -1,0 +1,142 @@
+/* Default */
+.accent0 { background-color: #d5e7ec !important; }
+.tile.accent0:not(.image-set) .brand, .tile.accent0 .brand .badge { background-color: #d5e7ec; }
+.accent0 * { color: #1d1d1d !important; }
+
+/* Text */
+.accent1 { background-color: #008287 !important; }
+.tile.accent1:not(.image-set) .brand, .tile.accent1 .brand .badge { background-color: #00aba9; }
+.accent1 * { color: #ffffff !important; }
+
+/* Link */
+.accent2 { background-color: #2b5797 !important; }
+.tile.accent2:not(.image-set) .brand, .tile.accent2 .brand .badge { background-color: #2d89ef; }
+.accent2 * { color: #ffffff !important; }
+
+/* Image */
+.accent3 { background-color: #00A300 !important; }
+.tile.accent3:not(.image-set) .brand, .tile.accent3 .brand .badge { background-color: #99b433; }
+.accent3 * { color: #ffffff !important; }
+
+/* Audio */
+.accent4 { background-color: #e3a21a !important; }
+.tile.accent4:not(.image-set) .brand, .tile.accent4 .brand .badge { background-color: #ffc40d; }
+.accent4 * { color: #1d1d1d !important; }
+
+/* Video */
+.accent5 { background-color: #b91d07 !important; }
+.tile.accent5:not(.image-set) .brand, .tile.accent5 .brand .badge { background-color: #ee1111; }
+.accent5 * { color: #ffffff !important; }
+
+/* Image Gallery */
+.accent6 { background-color: #da532c !important; }
+.tile.accent6:not(.image-set) .brand, .tile.accent6 .brand .badge { background-color: #ea8300; }
+.accent6 * { color: #ffffff !important ; }
+
+/* Playlist */
+.accent7 { background-color: #7e3878 !important; }
+.tile.accent7:not(.image-set) .brand, .tile.accent7 .brand .badge { background-color: #9f00a7; }
+.accent7 * { color: #ffffff !important ; }
+
+/* File */
+.accent8 { background-color: #603cba !important; }
+.tile.accent8:not(.image-set) .brand, .tile.accent8 .brand .badge { background-color: #903cfa; }
+.accent8 * { color: #ffffff !important; }
+
+/* Folder */
+.accent9 { background-color: #d3b26a !important; }
+.tile.accent9:not(.image-set) .brand, .tile.accent9 .brand .badge { background-color: #ffe29a; }
+.accent9 * { color: #1d1d1d !important; }
+
+/* Date */
+.accent10 { background-color: #b91d47 !important; } /* Errr......pink! */
+.tile.accent10:not(.image-set) .brand, .tile.accent10 .brand .badge { background-color: #f91d97; }
+.accent10 * { color: #ffffff !important; }
+
+.tile.date .tile-content * {
+	text-align: center;
+	line-height: 1.0 !important;
+}
+
+.tile.double.date .tile-content * {
+	text-align: left;
+}
+
+.tile.date .tile-content h2 {
+	font-size: 9pt;
+}
+
+.tile.double.date .tile-content h2 {
+	font-size: 12pt;
+}
+
+.tile.date .tile-content h3 {
+	font-size: 48pt;
+}
+
+.tile.double.date .tile-content h3 {
+	font-size: 64pt;
+	display: inline-block;
+	margin-right: 24px;
+	float: left;
+}
+
+.tile.date .tile-content h4.month {
+	font-size: 12pt;
+}
+
+.tile.date .tile-content h4.year {
+	font-size: 10pt;
+}
+
+.tile.double.date .tile-content h4.month {
+	display: block;
+	font-size: 32pt;
+}
+
+.tile.double.date .tile-content h4.year {
+	display: inline-block;
+	font-size: 24pt;
+}
+
+/* Phantom Tile */
+.tile#phantom {
+	background-color: transparent;
+	outline: 1px dotted #000;
+	opacity: 0.5;
+	display: table !important;
+}
+.tile#phantom .tile-content {
+	color: #000;
+	height: 100%;
+	width: 100%;
+
+	display: table-cell;
+	position: relative;
+	text-align: center;
+	vertical-align: middle;
+}
+.tile#phantom .tile-content i {
+	color: #000 !important;
+	font-size: 24pt;
+	line-height: 1.0;
+}
+
+.tile#phantom .tile-content a.options:hover {
+	opacity: 1.0 !important;
+}
+
+.tile > .brand > .badge > i.ringo-icon {
+	font-size: 16.5pt;
+}
+
+.tile.icon > .tile-content > i.ringo-icon {
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	top: 50%;
+	left: 50%;
+	margin-left: -32px;
+	margin-top: -24px;
+	font-size: 72px;
+}

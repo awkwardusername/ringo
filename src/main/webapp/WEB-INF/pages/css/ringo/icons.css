@@ -1,0 +1,146 @@
+@font-face {
+	font-family:'RinGo Icons';
+	src:url("RinGo-Icons.ttf");
+	font-weight:200;
+	font-style:normal;
+}
+
+@font-face {
+	font-family:'RinGo Icons';
+	src:url("RinGo-Icons.ttf");
+	font-weight:300;
+	font-style:normal;
+}
+
+@font-face {
+	font-family:'RinGo Icons';
+	src:url("RinGo-Icons.ttf");
+	font-weight:400;
+	font-style:normal;
+}
+
+@font-face{
+	font-family:'RinGo Icons';
+	src:url("RinGo-Icons.ttf");
+	font-weight:500;
+	font-style:normal;
+}
+
+@font-face{
+	font-family:'RinGo Icons';
+	src:url("RinGo-Icons.ttf");
+	font-weight:600;
+	font-style:normal;
+}
+
+@font-face{
+	font-family:'RinGo Icons';
+	src:url("RinGo-Icons.ttf");
+	font-weight:700;
+	font-style:normal;
+}
+
+@font-face{
+	font-family:'RinGo Icons';
+	src:url("RinGo-Icons.ttf");
+	font-weight:800;
+	font-style:normal;
+}
+
+@font-face{
+	font-family:'RinGo Icons';
+	src:url("RinGo-Icons.ttf");
+	font-weight:900;
+	font-style:normal;
+}
+
+@font-face{
+	font-family:'RinGo Icons';
+	src:url("RinGo-Icons.ttf");
+	font-weight:200;
+	font-style:italic;
+}
+
+@font-face{
+	font-family:'RinGo Icons';
+	src:url("RinGo-Icons.ttf");
+	font-weight:300;
+	font-style:italic;
+}
+
+@font-face{
+	font-family:'RinGo Icons';
+	src:url("RinGo-Icons.ttf");
+	font-weight:400;
+	font-style:italic;
+}
+
+@font-face{
+	font-family:'RinGo Icons';
+	src:url("RinGo-Icons.ttf");
+	font-weight:500;
+	font-style:italic;
+}
+
+@font-face{
+	font-family:'RinGo Icons';
+	src:url("RinGo-Icons.ttf");
+	font-weight:600;
+	font-style:italic;
+}
+
+@font-face{
+	font-family:'RinGo Icons';
+	src:url("RinGo-Icons.ttf");
+	font-weight:700;
+	font-style:italic;
+}
+
+@font-face{
+	font-family:'RinGo Icons';
+	src:url("RinGo-Icons.ttf");
+	font-weight:800;
+	font-style:italic;
+}
+
+@font-face{
+	font-family:'RinGo Icons';
+	src:url("RinGo-Icons.ttf");
+	font-weight:900;
+	font-style:italic;
+}
+
+.ringocss i.ringo-icon {
+	font-family: 'RinGo Icons', 'Nunito', 'BPreplay', serif !important;
+	font-style: normal;
+    word-break: keep-all;
+    text-wrap: avoid;
+}
+
+.ringocss i.ringo-icon.plus:before { content: '+'; }
+.ringocss i.ringo-icon.minus:before { content: '-'; }
+
+.ringocss i.ringo-icon.audio:before { content: 'A'; }
+.ringocss i.ringo-icon.folder:before { content: 'C'; }
+.ringocss i.ringo-icon.date:before { content: 'D'; }
+.ringocss i.ringo-icon.file:before { content: 'F'; }
+.ringocss i.ringo-icon.gallery:before { content: 'G'; }
+.ringocss i.ringo-icon.image:before { content: 'I'; }
+.ringocss i.ringo-icon.link:before { content: 'L'; }
+.ringocss i.ringo-icon.music:before { content: 'M'; }
+.ringocss i.ringo-icon.playlist:before { content: 'P'; }
+.ringocss i.ringo-icon.ringo:before { content: 'R'; }
+.ringocss i.ringo-icon.square:before { content: 'S'; }
+.ringocss i.ringo-icon.text:before { content: 'T'; }
+.ringocss i.ringo-icon.user:before { content: 'U'; }
+.ringocss i.ringo-icon.video:before { content: 'V'; }
+.ringocss i.ringo-icon.ex:before { content: 'X'; }
+
+.ringocss i.ringo-icon.edit:before { content: 'e'; }
+.ringocss i.ringo-icon.facebook:before { content: 'f'; }
+.ringocss i.ringo-icon.google:before { content: 'g'; }
+.ringocss i.ringo-icon.settings:before { content: 's'; }
+.ringocss i.ringo-icon.twitter:before { content: 't'; }
+
+.ringocss i.ringo-icon.space:before { content: '\00a0'; }
+

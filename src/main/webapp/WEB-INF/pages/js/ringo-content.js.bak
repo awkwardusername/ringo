@@ -1,0 +1,200 @@
+/**
+ * ringo-content
+ * Description:   Defines the class for a RinGo content Square.
+ * Project:       RinGo
+ *
+ * Written by:    Temoto-kun
+ * Website:       http://nihilist-philanthropy.co.cc
+ * E-mail:        kiiroifuriku(at)hotmail(dot)com
+ *
+ * Date:          2013 April 07   00:15
+ */
+
+/**
+ * Class for a RinGo content container (called a Square).
+ * @param c JSON object containing the
+ * @return {{getType: Function, getTitle: Function, setTitle: Function, getCaption: Function, setCaption: Function, getParent: Function, setParent: Function, getContent: Function}}
+ * @constructor
+ */
+
+// WHATIF we use TreeWalker as implementation for the content pool instead?
+RinGo.Square = function(c) {
+	/*
+	 * when c does not have any content or is an Array (presumably an Array containing other
+	 * `RinGo.Square`s), that means this `RinGo.Square` is automatically a Folder.
+	 */
+	var type = c.content !== undefined || c.content instanceof Array? c.type : RinGo.ContentTypes.Folder;
+	var title = c.title;
+	var parent = c.parent;
+	var caption = c.caption;
+	var content = c.content;
+
+	var dateAdded = new Date(); // TODO fetch date from server on content add.
+
+	var getRoot = function() {
+		var root = parent;
+		while(root != null)
+			root = parent.getParent;
+		return root;
+	};
+
+	return {
+		getType: function() {
+			/* QUESTION shall we allow content morphing?
+			 *
+			 * there's a bit of a trade-off if we do. Converting a Video into an Audio for example
+			 * is expensive. On the other hand, converting a Link into a Text (and v.v., provided
+			 * that the Text to be converted into a Link passes validity) is very easy.
+			 */
+			return type;
+		},
+
+		getTitle: function() {
+			return title;
+		},
+
+		setTitle: function(tl) {
+			title = tl;
+		},
+
+		getCaption: function() {
+			return caption;
+		},
+
+		setCaption: function(cp) {
+			caption = cp;
+		},
+
+		getParent: function() {
+			return parent;
+		},
+
+		// useful for moving objects into another folder or putting it in the root folder (i.e. the
+		// date when the content was uploaded)
+
+		// TODO disallow moving of object into another date.
+		setParent: function(p) {
+			if(p != this)
+				parent = p;
+			else
+				throw "Content cannot be a descendant of itself.";
+		},
+
+		getContent: function() {
+			switch(this.getType()) {
+			case RinGo.ContentTypes.Text:
+				return {
+					title: this.getTitle(),
+					subtitle: this.getCaption(),
+					body: content
+				};
+			case RinGo.ContentTypes.Link:
+				return {
+					title: this.getTitle(), // TODO can be set to link's title instead. Go fetch.
+					desc: this.getCaption(), // TODO also same case on title.
+					url: content
+				};
+			case RinGo.ContentTypes.Date:
+				return {
+					title: this.getTitle(),
+					caption: this.getCaption(),
+					date: content
+				};
+			case RinGo.ContentTypes.Image:
+				return {
+					title: this.getTitle(), // TODO when displaying this, img tag must have title attribute
+					caption: this.getCaption(), // TODO alt attribute
+					image: content
+				};
+			case RinGo.ContentTypes.Audio:
+				return {
+					title: this.getTitle(),
+					caption: this.getCaption(),
+					audio: content,
+					info: {
+						type: "audio" // TODO can be music, audio, etc.
+					} // audio info: length, bit rate, etc.
+				};
+			case RinGo.ContentTypes.Video:
+				return {
+					title: this.getTitle(),
+					caption: this.getCaption(),
+					video: content,
+					info: {} // video info: dimensions, length, etc.
+				};
+			case RinGo.ContentTypes.File:
+				return {
+					title: this.getTitle(),
+					caption: this.getCaption(),
+					file: content,
+					info: {} // file size, file type, etc.
+				};
+			case RinGo.ContentTypes.Folder:
+				return {
+					title: this.getTitle(),
+					caption: this.getCaption(),
+					contents: [], // contents of file.
+					info: {} // file size, etc.
+				};
+			}
+		},
+
+		/*
+		 * NOTE:
+		 * naming convention for folders and meta-folders:
+		 *
+		 *     ringo://<user>:<date>/[<folder/>|<file>]
+		 *
+		 * such that to reference a folder titled 'foo' created on 2013 Mar 14 by the user 'bar', the
+		 * unique id will be:
+		 *
+		 *     ringo://bar:20130314/foo/
+		 *
+		 * when referring to folders, make sure to add a slash in the end, else you will be referring
+		 * to the file with the same name instead.
+		 *
+		 * If you try to put this pseudo-URL into the address bar, it would redirect to the exact
+		 * location in RinGo (ringo acting as a redirect protocol).
+		 *
+		 * I think this will be pretty useful when RinGo is deployed, such that whenever you want to
+		 * refer to a specific content by a user, you simply append in to RinGo's home URL, as shown
+		 * (let's assume RinGo is using "www.ringo.ph" as home URL):
+		 *
+		 *     http://www.ringo.ph/bar:20130314/foo/
+		 *
+		 * and I was thinking if that pseudo-URL would redirect to a page something like this:
+		 *
+		 *     http://www.ringo.ph?user=bar&date=20130314&content=foo%2F
+		 */
+		getUniqueId: function() {
+			var date = dateAdded;
+			return getRoot().title + ":" + date.getFullYear() + (date.getMonth() + 1).pad()
+		},
+
+		toString: function() {
+			return "[object RinGo.Content]";
+		}
+	};
+};
+
+RinGo.ContentTypes = {
+	Text:       0x00,
+	Link:       0x01,
+	Date:       0x02,
+	Image:      0x03,
+	Audio:      0x04,
+	Video:      0x05,
+
+ // ________:   0x06,
+ // ________:   0x07,
+ // ________:   0x08,
+
+ // .. add custom content types here. ..
+ // QUESTION is the user able to add more content types?
+
+ // ________:   0x__,
+ // ________:   0x__,
+
+	File:       0xFE,
+	Folder:     0xFF
+};
